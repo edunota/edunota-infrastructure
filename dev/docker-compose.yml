@@ -1,0 +1,14 @@
+version: "3.8"
+
+services: 
+    postgres:
+        image: postgres
+        restart: always
+        environment:
+          POSTGRES_PASSWORD: edunota
+          POSTGRES_USER: edunota
+          POSTGRES_DB: edunota
+        ports:
+          - "5432:5432"
+    redis: 
+        image: redis:alpine3.18
